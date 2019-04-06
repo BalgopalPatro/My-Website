@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="icon" href="1.jpg" type="image/gif" sizes="16x16">
+
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-6773752335744230",
+          enable_page_level_ads: true
+        });
+      </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Gallery</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/5.9.2/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/5.9.2/firebase-auth.js"></script>
+    <script defer src="/__/firebase/5.9.2/firebase-database.js"></script>
+    <script defer src="/__/firebase/5.9.2/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/5.9.2/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+  </head>
+  <style>
+      body{
+          background-color:rgb(141, 209, 214);
+    
+      }
+      img{
+        border-style:groove;
+        border-radius: 10%;
+        border-color: red;
+        border-width: 1ch;
+        margin-left: 3ch;
+        margin-right: 3ch;
+        margin-top: 3.25ch;
+      }
+      #p{
+        border-style:double;
+        border-color:brown;
+        border-radius:.5cm;
+      }
+
+  </style>
+  <body>
+    <div id="p">
+      <img src="1.jpg" height="95" width="95" align="left" alt="Earn Money Logo" >
+      <img src="1.jpg" height="95" width="95" align="right" alt="Earn Money Logo" >
+      <h1><center>WelCome to My Gallery</center></h1>
+      <h2></h2>
+      <h2><center><i>The nice thing about the gallery shows is that without having to pay any money you can just go and see it.</i></center></h2>
+    </div>
+      <marquee><h1><b><i>PLR</i></b></h1></marquee>
+    
+
+
+  </body>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
+</html>
